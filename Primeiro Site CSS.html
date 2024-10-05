@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+   	<title>Site em HTML e CSS</title>
+	<style>
+	@font-face {
+		font-family: "Nunito-VariableFont_wght";
+		src: url("Nunito-VariableFont_wght.woff2") format("woff2");
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	@font-face {
+		font-family: "Dosis-Medium";
+		src: url("Dosis-Medium.woff2") format("woff2");
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	@font-face {
+		font-family: "Dosis-Regular";
+		src: url("Dosis-Regular.woff2") format("woff2");
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	body {
+	background-color: rgb(242, 242, 242);
+	}
+	
+	h1 {
+	font-family: "Dosis-Medium";
+	letter-spacing: 2px;
+	font-size: 35px;
+	background-color: rgb(204, 230, 255);
+	color: rgb(255, 153, 0);
+	border-style: ridge;
+	border-color:orange;
+	border-radius: 8px;
+	margin-left: 400px;
+	margin-right: 400px;
+	padding: 20px 20px 20px 20px;
+	text-align: center;
+	}
+	
+	table {
+	font-family: "Nunito-VariableFont_wght";
+	letter-spacing: 0.5px;
+	margin: auto;
+	border-collapse:collapse;
+	border-color: white;
+	padding: 10px 10px 10px 10px;
+	text-align: center;
+	width: 40%;
+	}
+	
+	th, td {
+	border-style: solid;
+	border-color: rgb(102, 179, 255);
+	padding: 10px 0px 10px 0px;
+	}
+	
+	tr:nth-child(even) {
+	background-color: white;
+	}
+	
+	th {
+	background-color: white;
+	}
+	
+	form {
+	border-radius: 4px;
+	font-family: "Dosis-Regular";
+	letter-spacing: 0.5px;
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-top: 20px;
+	}
+	
+	fieldset {
+	border: 2px solid rgb(0, 153, 51);
+	}
+	
+	legend {
+	border: 2px solid rgb(0, 153, 51);
+	border-radius: 4px;
+	font-weight: bold;
+	margin: auto;
+	}
+	
+	button {
+	background-color: white;
+	}
+	
+	button:hover {
+	background-color: rgb(255, 204, 0);
+	}
+	
+	input:focus {
+	background-color: rgb(230, 255, 230);
+	}
+	
+	textarea:focus {
+	background-color: rgb(230, 247, 255);
+	}
+	
+	</style>
+</head>
+<body>
+	<h1>Algumas bandas</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>Nome da Banda</th>
+					<th>Nome de alguma Músisa</th>
+					</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Abraskadabra</td>
+					<td>Catching Fog</td>
+				</tr>
+				<tr>
+					<td>Dead Fish</td>
+					<td>Queda Livre</td>
+				</tr>
+				<tr>
+					<td>Authority Zero</td>
+					<td>Retreat!</td>
+				</tr>
+				<tr>
+					<td>Kill Lincoln</td>
+					<td>Second Cities</td>
+				</tr>
+				<tr>
+					<td>Marzela</td>
+					<td>Rude Boys Unity</td>
+				</tr>
+			</tbody>
+			<tfoot>
+			<tr>
+			<th>Total de Bandas</th>
+			<th>5</th>
+			</tfoot>
+		</table>
+
+		<form>
+			<fieldset>
+				<legend>Informações Gerais</legend>
+				<label for="nome">Nome:</label>
+				<input type="text"  name="nome" required>
+				<label for="data">Data de Nascimento:</label>
+				<input type="date" name="data" required>
+				<label for="email">Email:</label>
+				<input type="email" name="email" required>
+				<label for="tel">Telefone:</label>
+				<input type="tel" name="telefone" required>
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>Endereço</legend>
+				<label for="tipo_endereco">Tipo:</label>
+				<select name="tipo_endereco">
+					<option value="">Selecione</label>
+					<option value="">Rua</label>
+					<option value="">Estrada</label>
+					<option value="">Outros</label>
+				</select>
+				<label for ="logradouro_endereco">Logradouro:</label>
+				<input type="text" name="logradouro_endereco"/>
+				<label for ="numero_endereco">Número:</label>
+				<input type="text" name="numero_endereco"/>
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>Crie um Usuário</legend>
+				<label for="login">Usuário:</label>
+				<input type="text" name="login"/>
+				<label for="senha">Senha:</label>
+				<input type="password" minlength="8" name="senha"/>
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>Comentário</legend>
+				<label for="mensagem">Mensagem:</label>
+				<textarea name="mensagem" cols="40" rows=4></textarea>
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>Confirme as Informações</legend>
+				<label for "campo">Marcar o campo e enviar</label>
+				<input type="checkbox" name="campo"/>
+				<button type="submit">Enviar suas Informações</button>
+				<button type="reset">Limpar o Formulário</button>
+			</fieldset>
+		</form>
+  </body>
+</html>
